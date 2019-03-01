@@ -12,11 +12,11 @@ tags:
 
 * (Geometric) Transform
 
-    Takes points in one coordinate system and applys in another coordinate system.
+    Takes points in one coordinate system and applys in another coordinate system. Applies matrices to coordiantes.
 
 * Viewport
 
-    ...
+    Portion of screen that displays rendered image.
 
 * Clipping
 
@@ -28,7 +28,7 @@ tags:
 
 * Texture mapping
 
-    ...
+    Wraps a texture aimage around an object.
 
 * Blending
 
@@ -40,7 +40,7 @@ tags:
 
 * Alpha value
 
-    Transparency
+    Transparency value.
 
 * Shader program
 
@@ -48,4 +48,4 @@ tags:
 
 * Color quantisation
 
-    ...
+    Mapping one color range to another.

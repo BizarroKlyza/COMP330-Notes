@@ -10,7 +10,7 @@ WebGL is really good for beginners. Modern and up to date (but not bleeding edge
 
 ## Use a sane browser
 
-Use Firefox Developer Edition. It allows things like like shader code editing which will be useful. Chrome is good too as its error messages are sometimes better than Firefox. Edge is decent. Safari is trash. IE is complete garbage.
+Use [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/). It allows things like like shader code editing which will be useful. Chrome is good too as its error messages are sometimes better than Firefox. Edge is decent. Safari is trash. IE is complete garbage.
 
 ## Boilerplate HTML file
 
@@ -22,7 +22,7 @@ Use Firefox Developer Edition. It allows things like like shader code editing wh
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Week 1</title>
+    <title>Yeet</title>
     <script src="main.js"></script>
     <style>
         html,
@@ -39,9 +39,15 @@ Use Firefox Developer Edition. It allows things like like shader code editing wh
 
 <body>
     <script type="text/javascript">
-        start();
+        
     </script>
 </body>
 
 </html>
 ```
+
+## What did we learn today?
+
+**NOTHING**
+
+*Thanks Peter*
