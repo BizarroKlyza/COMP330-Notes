@@ -37,10 +37,11 @@ Use Firefox Developer Edition. It allows things like like shader code editing wh
     </style>
 </head>
 
-<body></body>
-<script type="text/javascript">
-    start();
-</script>
+<body>
+    <script type="text/javascript">
+        start();
+    </script>
+</body>
 
 </html>
 ```
