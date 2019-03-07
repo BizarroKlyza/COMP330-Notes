@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Computer Graphics Pipeline Pipeline   Sequence of steps we go through to process data and produce an end result.  (Geometric) Transform   Takes points in one coordinate system and applys in another co">
+    <meta name="description" content="Contributers: Anthony Klyza, Elise McCabe, Jamie Simpson What is computer graphics:Computer graphics is about producing images or animations.A model is the data it takes to describe a scene, which is">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Week 1 - Lecture 1">
 <meta property="og:url" content="https://bizarroklyza.github.io/2019/02/28/Week-1-Lecture-1/index.html">
 <meta property="og:site_name" content="COMP330: Computer Graphics">
-<meta property="og:description" content="Computer Graphics Pipeline Pipeline   Sequence of steps we go through to process data and produce an end result.  (Geometric) Transform   Takes points in one coordinate system and applys in another co">
+<meta property="og:description" content="Contributers: Anthony Klyza, Elise McCabe, Jamie Simpson What is computer graphics:Computer graphics is about producing images or animations.A model is the data it takes to describe a scene, which is">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-01T01:58:12.245Z">
+<meta property="og:updated_time" content="2019-03-07T09:27:44.818Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Week 1 - Lecture 1">
-<meta name="twitter:description" content="Computer Graphics Pipeline Pipeline   Sequence of steps we go through to process data and produce an end result.  (Geometric) Transform   Takes points in one coordinate system and applys in another co">
+<meta name="twitter:description" content="Contributers: Anthony Klyza, Elise McCabe, Jamie Simpson What is computer graphics:Computer graphics is about producing images or animations.A model is the data it takes to describe a scene, which is">
     
     
         
@@ -98,7 +98,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Computer-Graphics-Pipeline"><span class="toc-number">1.</span> <span class="toc-text">Computer Graphics Pipeline</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-computer-graphics"><span class="toc-number">1.</span> <span class="toc-text">What is computer graphics:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Raster-Graphics"><span class="toc-number">1.1.</span> <span class="toc-text">Raster Graphics</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-CPU"><span class="toc-number">2.</span> <span class="toc-text">The CPU</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Computer-Graphics-Pipeline"><span class="toc-number">3.</span> <span class="toc-text">Computer Graphics Pipeline</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Handout-1-1"><span class="toc-number">3.1.</span> <span class="toc-text">Handout 1.1:</span></a></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -137,7 +137,14 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h2 id="Computer-Graphics-Pipeline"><a href="#Computer-Graphics-Pipeline" class="headerlink" title="Computer Graphics Pipeline"></a>Computer Graphics Pipeline</h2><ul>
+    <p><em>Contributers: Anthony Klyza, Elise McCabe, Jamie Simpson</em></p>
+<h2 id="What-is-computer-graphics"><a href="#What-is-computer-graphics" class="headerlink" title="What is computer graphics:"></a>What is computer graphics:</h2><p>Computer graphics is about producing images or animations.<br>A model is the data it takes to describe a scene, which is then run through multiple processing steps to generate an image.<br>OpenGL is a library that does the graphics work for you. It is almost a language.<br>It is similar to an API, which we can call using Javascript.</p>
+<h3 id="Raster-Graphics"><a href="#Raster-Graphics" class="headerlink" title="Raster Graphics"></a>Raster Graphics</h3><p>Here we have pixels, each pixel contains a colour, most will have 8 bits per pixel, which contains values <code>0-255</code>. These values are repeated 3 times for Red, Green<br>and Blue.<br>Now that we have this raster we need a way to refer to it. We use a coordinate<br>format for this.</p>
+<h2 id="The-CPU"><a href="#The-CPU" class="headerlink" title="The CPU"></a>The CPU</h2><p>The cpu can communicate with the graphics processor over the system bus which<br>generates data and stores it in the Frame buffer.</p>
+<p>This is memory that corresponds<br>to the pixels on the screen. The frame buffer is on the graphics card. What we want<br>to do is generate an image on the screen so we need to take the colour values out<br>of here and send them as pixels to the display controller.</p>
+<p>What this does is reads<br>out the rgb values for each pixel and sends it to the display as a voltage value. How<br>fast it does this is the FPS of the display. I.E., a 60Hz display will read out of the frame<br>buffer 60 times per second. The graphics processor writes data into the frame buffer and the display controller will read out of it.</p>
+<h2 id="Computer-Graphics-Pipeline"><a href="#Computer-Graphics-Pipeline" class="headerlink" title="Computer Graphics Pipeline"></a>Computer Graphics Pipeline</h2><p>Computer graphics starts with a model that defines a load of points in 3d<br>space.<br>We connect these together with 2d shapes such as triangles.</p>
+<h3 id="Handout-1-1"><a href="#Handout-1-1" class="headerlink" title="Handout 1.1:"></a>Handout 1.1:</h3><ul>
 <li><p>Pipeline</p>
 <p>  Sequence of steps we go through to process data and produce an end result.</p>
 </li>
@@ -195,7 +202,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Computer-Graphics-Pipeline"><span class="toc-number">1.</span> <span class="toc-text">Computer Graphics Pipeline</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-computer-graphics"><span class="toc-number">1.</span> <span class="toc-text">What is computer graphics:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Raster-Graphics"><span class="toc-number">1.1.</span> <span class="toc-text">Raster Graphics</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-CPU"><span class="toc-number">2.</span> <span class="toc-text">The CPU</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Computer-Graphics-Pipeline"><span class="toc-number">3.</span> <span class="toc-text">Computer Graphics Pipeline</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Handout-1-1"><span class="toc-number">3.1.</span> <span class="toc-text">Handout 1.1:</span></a></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
