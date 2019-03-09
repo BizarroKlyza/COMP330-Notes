@@ -27,4 +27,4 @@ p = a +t(b-a)
 
 ## Handout 2.1
 ![](Week-2-Lecture-1/DraggedImage.png)
-<a src="DraggedImage.png"><img src="DraggedImage.png" /></a>
+<a href="DraggedImage.png"><img src="DraggedImage.png" /></a>
