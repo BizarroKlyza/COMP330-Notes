@@ -4,7 +4,7 @@ date: 2019-02-28 17:50:37
 tags:
 ---
 
-*Contributors: Anthony Klyza, Elise McCabe, Jamie Simpson*
+*Contributors: Anthony Klyza, Elise McCabe, Jamie Simpson, Lin Xie*
 
 ## What is computer graphics
 Computer graphics is about producing images or animations.
@@ -53,11 +53,11 @@ We connect these together with 2d shapes such as triangles.
 
 * Clipping
 
-    ...
+    Method of selectively enable or disable rendering operations within a defined region of interest.
 
 * Rasterisation
 
-    ...
+    Technique of taking an image described in a vector graphics format and transform it into a set of pixels for output on a screen.
 
 * Texture mapping
 
@@ -65,11 +65,11 @@ We connect these together with 2d shapes such as triangles.
 
 * Blending
 
-    ...
+    Convex combination of two colours allowing for transparency effects 0.0 -> 1.0 (transparent -> opaque).
 
 * Depth buffering
 
-    ...
+    Management of image depth coordinates in 3D graphics.
 
 * Alpha value
 
@@ -77,7 +77,7 @@ We connect these together with 2d shapes such as triangles.
 
 * Shader program
 
-    ...
+    Set of algorithms that determines how surface properties of objects are rendered.
 
 * Color quantisation
 
