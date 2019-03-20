@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="MatricesMatrices to the rescueMatrices allow us to easil manage transformations. Different transformations are the same size (think of them as shipping containers). Matrices can be combined. Matrices">
+    <meta name="description" content="MatricesMatrices to the rescueMatrices allow us to easily manage transformations. Different transformations are the same size (think of them as shipping containers). Matrices can be combined. Matrices">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Week 3 Lecture 2">
 <meta property="og:url" content="https://bizarroklyza.github.io/2019/03/15/Week-3-Lecture-2/index.html">
 <meta property="og:site_name" content="COMP330: Computer Graphics">
-<meta property="og:description" content="MatricesMatrices to the rescueMatrices allow us to easil manage transformations. Different transformations are the same size (think of them as shipping containers). Matrices can be combined. Matrices">
+<meta property="og:description" content="MatricesMatrices to the rescueMatrices allow us to easily manage transformations. Different transformations are the same size (think of them as shipping containers). Matrices can be combined. Matrices">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-15T00:26:24.112Z">
+<meta property="og:updated_time" content="2019-03-20T23:51:27.988Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Week 3 Lecture 2">
-<meta name="twitter:description" content="MatricesMatrices to the rescueMatrices allow us to easil manage transformations. Different transformations are the same size (think of them as shipping containers). Matrices can be combined. Matrices">
+<meta name="twitter:description" content="MatricesMatrices to the rescueMatrices allow us to easily manage transformations. Different transformations are the same size (think of them as shipping containers). Matrices can be combined. Matrices">
     
     
         
@@ -139,10 +139,10 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h2 id="Matrices"><a href="#Matrices" class="headerlink" title="Matrices"></a>Matrices</h2><h3 id="Matrices-to-the-rescue"><a href="#Matrices-to-the-rescue" class="headerlink" title="Matrices to the rescue"></a>Matrices to the rescue</h3><p>Matrices allow us to easil manage transformations. Different transformations are the same size (think of them as shipping containers). Matrices can be combined.</p>
+    <h2 id="Matrices"><a href="#Matrices" class="headerlink" title="Matrices"></a>Matrices</h2><h3 id="Matrices-to-the-rescue"><a href="#Matrices-to-the-rescue" class="headerlink" title="Matrices to the rescue"></a>Matrices to the rescue</h3><p>Matrices allow us to easily manage transformations. Different transformations are the same size (think of them as shipping containers). Matrices can be combined.</p>
 <h3 id="Matrices-in-WebGL"><a href="#Matrices-in-WebGL" class="headerlink" title="Matrices in WebGL"></a>Matrices in WebGL</h3><p>THANKS. I hate it.</p>
-<p>WebGL allow us to easily talka bout matrices. However, one major differences is that WebGL matrices are <strong><em>transposed</em></strong> from how we normally deal with them. Tou will need to take this into account when writing matrix code.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">OG Matrix:</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">ix, jx, Tx</span></span><br><span class="line"><span class="comment">iy, jy, Ty,</span></span><br><span class="line"><span class="comment"> 0,  0,  1</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Trnasposed WebGL Matrix</span></span><br><span class="line"><span class="keyword">const</span> matrix = [</span><br><span class="line">    ix, iy, <span class="number">0</span>,</span><br><span class="line">    jx, jy, <span class="number">0</span>,</span><br><span class="line">    Tx, Ty, <span class="number">1</span></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<p>WebGL allow us to easily talk about matrices. However, one major difference is that WebGL matrices are <strong><em>transposed</em></strong> from how we normally deal with them. You will need to take this into account when writing matrix code.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">OG Matrix:</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">ix, jx, Tx</span></span><br><span class="line"><span class="comment">iy, jy, Ty,</span></span><br><span class="line"><span class="comment"> 0,  0,  1</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Transposed WebGL Matrix</span></span><br><span class="line"><span class="keyword">const</span> matrix = [</span><br><span class="line">    ix, iy, <span class="number">0</span>,</span><br><span class="line">    jx, jy, <span class="number">0</span>,</span><br><span class="line">    Tx, Ty, <span class="number">1</span></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
 
   </div>
 </article>
