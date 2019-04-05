@@ -5,3 +5,15 @@ tags:
 ---
 
 ## 2D Camera
+
+Lists bad. Trees good.
+
+*DAG - Directed Acyclic Graph. No loops*
+
+### Circles
+
+yeet it was all drawing
+
+### Beziere Curves
+
+Thanks, I hate it.
