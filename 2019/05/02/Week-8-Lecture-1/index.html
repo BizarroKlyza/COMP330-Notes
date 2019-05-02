@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Depth and TransparencyIt’s a per sample operation Take fragments from rasterization and determine which to put on screen.">
+    <meta name="description" content="Depth and TransparencyIt’s a per sample operation Take fragments from rasterization and determine which to put on screen. Painter’s algorithmThe naive approach to hidden surface removal.  Sort polygon">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Week 8 Lecture 1">
 <meta property="og:url" content="https://bizarroklyza.github.io/2019/05/02/Week-8-Lecture-1/index.html">
 <meta property="og:site_name" content="COMP330: Computer Graphics">
-<meta property="og:description" content="Depth and TransparencyIt’s a per sample operation Take fragments from rasterization and determine which to put on screen.">
+<meta property="og:description" content="Depth and TransparencyIt’s a per sample operation Take fragments from rasterization and determine which to put on screen. Painter’s algorithmThe naive approach to hidden surface removal.  Sort polygon">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-02T01:09:33.212Z">
+<meta property="og:updated_time" content="2019-05-02T02:05:04.342Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Week 8 Lecture 1">
-<meta name="twitter:description" content="Depth and TransparencyIt’s a per sample operation Take fragments from rasterization and determine which to put on screen.">
+<meta name="twitter:description" content="Depth and TransparencyIt’s a per sample operation Take fragments from rasterization and determine which to put on screen. Painter’s algorithmThe naive approach to hidden surface removal.  Sort polygon">
     
     
         
@@ -98,7 +98,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Depth-and-Transparency"><span class="toc-number">1.</span> <span class="toc-text">Depth and Transparency</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Depth-and-Transparency"><span class="toc-number">1.</span> <span class="toc-text">Depth and Transparency</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Painter’s-algorithm"><span class="toc-number">1.1.</span> <span class="toc-text">Painter’s algorithm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Z-buffering"><span class="toc-number">1.2.</span> <span class="toc-text">Z-buffering</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Depth"><span class="toc-number">1.3.</span> <span class="toc-text">Depth</span></a></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -139,6 +139,15 @@
   <div class="content" itemprop="articleBody">
     <h1 id="Depth-and-Transparency"><a href="#Depth-and-Transparency" class="headerlink" title="Depth and Transparency"></a>Depth and Transparency</h1><p><em>It’s a per sample operation</em></p>
 <p>Take fragments from rasterization and determine which to put on screen.</p>
+<h2 id="Painter’s-algorithm"><a href="#Painter’s-algorithm" class="headerlink" title="Painter’s algorithm"></a>Painter’s algorithm</h2><p>The naive approach to hidden surface removal.</p>
+<ul>
+<li>Sort polygons by depth</li>
+<li>Draw in order from back to front</li>
+</ul>
+<p>Sorting triangles, bad. Sorting pixels, good.</p>
+<h2 id="Z-buffering"><a href="#Z-buffering" class="headerlink" title="Z-buffering"></a>Z-buffering</h2><p>For each pixel, keep a <strong>z-buffer</strong> (or <strong>Depth-buffer</strong>):</p>
+<pre><code>depth[x,y] = current depth of fragment at (x,y)
+</code></pre><h2 id="Depth"><a href="#Depth" class="headerlink" title="Depth"></a>Depth</h2><p>In reality depth values are floating point values between -1 (near plane) and 1 (far plane).</p>
 
   </div>
 </article>
@@ -162,7 +171,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Depth-and-Transparency"><span class="toc-number">1.</span> <span class="toc-text">Depth and Transparency</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Depth-and-Transparency"><span class="toc-number">1.</span> <span class="toc-text">Depth and Transparency</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Painter’s-algorithm"><span class="toc-number">1.1.</span> <span class="toc-text">Painter’s algorithm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Z-buffering"><span class="toc-number">1.2.</span> <span class="toc-text">Z-buffering</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Depth"><span class="toc-number">1.3.</span> <span class="toc-text">Depth</span></a></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
